@@ -1,6 +1,6 @@
 # TasteofT
 
-Food Catering Website
+Food Catering Website Work in Progress
 
 This project is a food Catering website built using Bootstrap. It allows users to add multiple food items to a cart and proceed to checkout using Square for payments. The backend is powered by Node.js and Express, with integration of Square's Orders API and Checkout API for order processing and payment collection.
 Features
