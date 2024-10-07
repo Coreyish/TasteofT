@@ -28,7 +28,7 @@
                 "currency": "USD"
               },
               "stockable": true
-            }
+
           },
           {
             "type": "ITEM_VARIATION",
@@ -52,22 +52,23 @@
         ],
         "product_type": "REGULAR"
       }
+    }
+  ],
+  "id_mappings": [
+    {
+      "client_object_id": "#coffee",
+      "object_id": "FX3LTXC2CCFCGHLGMSFLBSDO"
     },
-    "id_mappings": [
-      {
-        "client_object_id": "#coffee",
-        "object_id": "FX3LTXC2CCFCGHLGMSFLBSDO"
-      },
-      {
-        "client_object_id": "#small_coffee",
-        "object_id": "OXRR3XANRU5TEQ3FQMDW5IJK"
-      },
-      {
-        "client_object_id": "#large_coffee",
-        "object_id": "3EFNOI25E4NUK53CU4KMUHXX"
-      }
-    ]
-  }
+    {
+      "client_object_id": "#small_coffee",
+      "object_id": "OXRR3XANRU5TEQ3FQMDW5IJK"
+    },
+    {
+      "client_object_id": "#large_coffee",
+      "object_id": "3EFNOI25E4NUK53CU4KMUHXX"
+    }
+  ]
+}
   
   try {
     const response = await client.catalogApi.upsertCatalogObject({
@@ -90,4 +91,25 @@
     console.log(error);
   }
   
-  
+  const catalog_object = {
+    "type": "TAX",
+    "id": "TEROS7KLG76NDY4J7TYFZVGA",
+    "updated_at": "2021-06-15T19:12:49.613Z",
+    "version": 1623784369613,
+    "is_deleted": false,
+    "present_at_all_locations": true,
+    "tax_data": {
+      "name": "Drink Tax",
+      "calculation_phase": "TAX_SUBTOTAL_PHASE",
+      "inclusion_type": "ADDITIVE",
+      "percentage": "7.5",
+      "applies_to_custom_amounts": false,
+      "enabled": true
+    }
+  };
+  const id_mappings = [
+    {
+      "client_object_id": "#sales_tax",
+      "object_id": "TEROS7KLG76NDY4J7TYFZVGA"
+    }
+  ];
