@@ -1,4 +1,24 @@
 
+try {
+  const response = await client.paymentsApi.createPayment({
+    sourceId: '{PAYMENT_TOKEN}',
+    idempotencyKey: '{UNIQUE_KEY}',
+    amountMoney: {
+      amount: 1500,
+      currency: 'USD'
+    },
+    autocomplete: false,
+    orderId: '{ORDER_ID}',
+    locationId: '{LOCATION_ID}'
+  });
+
+  console.log(response.result);
+} catch(error) {
+  console.log(error);
+}
+
+400 Response 
+
 {    "catalog_object": {
       "type": "ITEM",
       "id": "FX3LTXC2CCFCGHLGMSFLBSDO",
