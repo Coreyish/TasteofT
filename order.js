@@ -1,5 +1,5 @@
-{
-    "catalog_object": {
+
+{    "catalog_object": {
       "type": "ITEM",
       "id": "FX3LTXC2CCFCGHLGMSFLBSDO",
       "updated_at": "2021-06-15T18:48:16.262Z",
@@ -67,6 +67,27 @@
         "object_id": "3EFNOI25E4NUK53CU4KMUHXX"
       }
     ]
+  }
+  
+  try {
+    const response = await client.catalogApi.upsertCatalogObject({
+      idempotencyKey: '{UNIQUE_KEY}',
+      object: {
+        type: 'TAX',
+        id: '#sales_tax',
+        taxData: {
+          name: 'Drink Tax',
+          calculationPhase: 'TAX_SUBTOTAL_PHASE',
+          inclusionType: 'ADDITIVE',
+          percentage: '7.5',
+          appliesToCustomAmounts: true
+        }
+      }
+    });
+  
+    console.log(response.result);
+  } catch(error) {
+    console.log(error);
   }
   
   
