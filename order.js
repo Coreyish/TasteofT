@@ -17,8 +17,6 @@ try {
   console.log(error);
 }
 
-400 Response 
-
 {    "catalog_object": {
       "type": "ITEM",
       "id": "FX3LTXC2CCFCGHLGMSFLBSDO",
